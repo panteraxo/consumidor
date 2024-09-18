@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 public class CustomerEventsService {
 
-	@KafkaListener(topics = "${topic.customer.name:topic-pais-3}",
+	@KafkaListener(topics = "${topic.customer.name:topic-pais}",
 			containerFactory = "kafkaListenerContainerFactory",
 	groupId = "prueba")
 	public void consumer(Event<?> event) {
